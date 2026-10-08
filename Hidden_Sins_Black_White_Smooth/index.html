@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hidden Sins — We're All Hiding in Truth.</title>
+<meta name="description" content="Hidden Sins — Collection 001. We're all hiding in truth.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap');
+:root{--black:#050505;--char:#111111;--cream:#ffffff;--red:#ffffff;--muted:#a8a8a8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:#ffffff;font-family:Inter,Arial,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}
+.announcement{text-align:center;background:#ffffff;color:#050505;padding:9px;font-size:10px;font-weight:700;letter-spacing:1.8px}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;border-bottom:1px solid #30302d;position:sticky;top:0;background:rgba(18,18,18,.94);backdrop-filter:blur(10px);z-index:20}
+.logo{font-family:Anton,sans-serif;font-size:27px;letter-spacing:1px}.navlinks{display:flex;gap:28px;font-size:11px;letter-spacing:1.4px;font-weight:600}.navlinks a:hover{opacity:.55}.cart{font-size:11px;letter-spacing:1px}.menu{display:none}
+.hero{min-height:78vh;display:grid;place-items:center;text-align:center;padding:70px 6%;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 45%,#262626 0,#111111 38%,#050505 72%)}
+.hero:before{content:"";position:absolute;inset:-20%;background:repeating-linear-gradient(115deg,transparent 0 7px,rgba(255,255,255,.018) 8px 9px);transform:rotate(-5deg)}
+.hero-inner{position:relative;max-width:850px}.hero-logo-wrap{width:min(78vw,520px);margin:0 auto 18px;perspective:900px}.hero-logo{width:100%;height:auto;display:block;filter:drop-shadow(0 10px 18px rgba(0,0,0,.35));transform-style:preserve-3d;animation:logoSpin 18s cubic-bezier(.45,0,.55,1) infinite}@keyframes logoSpin{0%{transform:rotateY(0deg)}50%{transform:rotateY(180deg)}100%{transform:rotateY(360deg)}}@media(prefers-reduced-motion:reduce){.hero-logo{animation:none}}.eyebrow{font-size:11px;letter-spacing:4px;margin-bottom:22px}.hero h1{font-family:Anton,sans-serif;font-size:clamp(70px,15vw,180px);line-height:.82;margin:0;letter-spacing:2px}.hero p{font-family:Georgia,serif;font-style:italic;font-size:clamp(18px,2.6vw,28px);margin:28px 0}.buttons{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.btn{border:1px solid var(--cream);padding:15px 25px;font-size:10px;font-weight:700;letter-spacing:2px;display:inline-block;cursor:pointer;background:#ffffff;color:#050505}.btn.alt{background:transparent;color:#ffffff}.btn:hover{transform:translateY(-1px)}
+section{padding:90px 5%}.statement{text-align:center;max-width:820px;margin:auto}.statement h2,.section-title{font-family:Anton,sans-serif;font-size:clamp(38px,7vw,76px);line-height:.9;margin:0 0 25px}.statement p{color:#d0d0d0;line-height:1.8;max-width:610px;margin:auto;font-size:15px}.label{font-size:10px;letter-spacing:3px;color:var(--muted);margin-bottom:15px}
+.products{background:#080808}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:35px}.section-head p{color:var(--muted);font-size:12px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:#101010}.product-img{aspect-ratio:4/5;display:grid;place-items:center;position:relative;overflow:hidden;background:linear-gradient(145deg,#2a2a2a,#090909)}.product-img:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 5px,rgba(255,255,255,.025) 6px 7px);mix-blend-mode:screen}.garment{font-family:Anton,sans-serif;font-size:clamp(38px,7vw,82px);letter-spacing:2px;transform:rotate(-7deg);text-align:center;line-height:.8}.tee{font-size:clamp(28px,5vw,60px)}.red{color:#ffffff}.cream{color:#ffffff}.black{color:#080808;text-shadow:0 0 0 var(--cream)}.card-info{padding:17px}.card-info h3{font-size:12px;letter-spacing:1px;margin:0 0 8px}.price{font-size:12px;color:#d0d0d0}.pre{font-size:9px;color:#ffffff;letter-spacing:1.5px;margin-top:8px;font-weight:700}
+.feature{display:grid;grid-template-columns:1.25fr .75fr;min-height:580px;padding:0;background:#111111}.feature-art{display:grid;place-items:center;background:radial-gradient(circle,#333333,#090909 62%);font-family:Anton,sans-serif;font-size:clamp(70px,13vw,180px);letter-spacing:-4px}.feature-copy{padding:8%;display:flex;flex-direction:column;justify-content:center}.feature-copy h2{font-family:Anton,sans-serif;font-size:clamp(42px,6vw,80px);line-height:.9;margin:10px 0 20px}.feature-copy p{color:#d0d0d0;line-height:1.7;font-size:14px}
+.lookbook{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.look{aspect-ratio:3/4;display:grid;place-items:end start;padding:15px;background:linear-gradient(150deg,#303030,#080808);font-size:10px;letter-spacing:2px}
+.about{max-width:900px;margin:auto}.about h2{font-family:Anton,sans-serif;font-size:clamp(55px,9vw,105px);line-height:.84;margin:0}.about p{font-size:16px;line-height:1.9;color:#d0d0d0;max-width:650px}
+.signup{text-align:center;background:#ffffff;color:#050505}.signup h2{font-family:Anton,sans-serif;font-size:clamp(42px,7vw,78px);line-height:.9;margin:0 0 12px}.signup p{font-size:13px;color:#555555}.signup form{display:flex;max-width:500px;margin:25px auto 0}.signup input{flex:1;padding:15px;border:1px solid #aaa;background:transparent;color:#111;min-width:0}.signup button{border:0;background:var(--black);color:#ffffff;padding:15px 22px;font-size:10px;font-weight:700;letter-spacing:1.5px}
+footer{padding:55px 5%;border-top:1px solid #30302d;display:flex;justify-content:space-between;gap:40px}.footbrand{font-family:Anton,sans-serif;font-size:30px}.footlinks{display:flex;gap:22px;font-size:10px;letter-spacing:1.2px;color:#a8a8a8}.copyright{font-size:9px;color:#777777;align-self:end}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:50;display:none;align-items:center;justify-content:center;padding:20px}.modal.show{display:flex}.modal-box{background:#101010;max-width:520px;width:100%;padding:30px;position:relative;border:1px solid #3a3a35}.close{position:absolute;right:18px;top:14px;background:none;border:0;color:#ffffff;font-size:24px;cursor:pointer}.modal h2{font-family:Anton,sans-serif;font-size:44px;margin:0 0 10px}.modal p{color:#bcbcbc;font-size:13px;line-height:1.6}.sizes{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.size{background:transparent;border:1px solid #666666;color:#ffffff;padding:11px 15px;cursor:pointer}.size.selected{background:#ffffff;color:#050505}.cartmsg{font-size:11px;color:#a8a39a;margin-top:12px}
+@media(max-width:700px){nav{height:65px}.navlinks{display:none}.menu{display:block;font-size:12px;letter-spacing:1px}.hero{min-height:70vh}.grid{grid-template-columns:1fr 1fr;gap:9px}.section-head{display:block}.section-head p{margin-top:8px}.feature{grid-template-columns:1fr;min-height:0}.feature-art{min-height:430px}.lookbook{grid-template-columns:1fr 1fr}.look{aspect-ratio:1/1.35}section{padding:65px 5%}.signup form{flex-direction:column;gap:8px}.signup input,.signup button{width:100%}footer{flex-direction:column}.copyright{align-self:auto}}
+</style>
+</head>
+<body>
+<div class="announcement">COLLECTION 001 — PRE-ORDERS OPEN SOON</div>
+<nav>
+  <a class="logo" href="#">HIDDEN SINS</a>
+  <div class="navlinks">
+    <a href="#shop">SHOP</a><a href="#collection">COLLECTION 001</a><a href="#about">ABOUT</a><a href="#size">SIZE GUIDE</a>
+  </div>
+  <div class="cart" id="cartCount">CART (0)</div>
+  <div class="menu">MENU</div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">COLLECTION 001 / 2026</div>
+    <div class="hero-logo-wrap"><img class="hero-logo" src="hidden-sins-rotating-logo.png" alt="Hidden Sins chrome angel logo"></div>
+    <p>We're all hiding in truth.</p>
+    <div class="buttons"><a class="btn" href="#collection">SHOP COLLECTION</a><a class="btn alt" href="#lookbook">VIEW LOOKBOOK</a></div>
+  </div>
+</header>
+
+<section class="statement">
+  <div class="label">THE IDEA</div>
+  <h2>WE'RE ALL HIDING IN TRUTH.</h2>
+  <p>We all have something we hide. A thought. A desire. A mistake. A version of ourselves nobody knows. Hidden Sins was created around that idea. Not perfection. Truth. Wear what you can't say.</p>
+</section>
+
+<section class="products" id="collection">
+  <div class="section-head"><div><div class="label">DROP 01</div><h2 class="section-title">COLLECTION 001</h2></div><p>A study of what we hide.</p></div>
+  <div class="grid" id="shop">
+    <article class="card" onclick="openProduct('Eye of Truth Tee',60)">
+      <div class="product-img"><div class="garment tee cream">EYE<br><span class="red">OF</span><br>TRUTH</div></div>
+      <div class="card-info"><h3>EYE OF TRUTH TEE</h3><div class="price">$60</div><div class="pre">PRE-ORDER</div></div>
+    </article>
+    <article class="card" onclick="openProduct('Hidden Sins Tee',60)">
+      <div class="product-img"><div class="garment tee cream">HIDDEN<br><span class="red">SINS</span></div></div>
+      <div class="card-info"><h3>HIDDEN SINS TEE</h3><div class="price">$60</div><div class="pre">PRE-ORDER</div></div>
+    </article>
+    <article class="card" onclick="openProduct('Crosses Tee',65)">
+      <div class="product-img"><div class="garment cream">✝ ✝<br><span class="red">✝</span><br>TRUTH</div></div>
+      <div class="card-info"><h3>CROSSES TEE</h3><div class="price">$65</div><div class="pre">PRE-ORDER</div></div>
+    </article>
+    <article class="card" onclick="openProduct('Eye Washed Jacket',120)">
+      <div class="product-img"><div class="garment cream">◉</div></div>
+      <div class="card-info"><h3>EYE WASHED JACKET</h3><div class="price">$120</div><div class="pre">PRE-ORDER</div></div>
+    </article>
+  </div>
+</section>
+
+<section class="feature">
+  <div class="feature-art">◉</div>
+  <div class="feature-copy">
+    <div class="label">FEATURED PIECE / 001</div>
+    <h2>THE EYE SEES EVERYTHING.</h2>
+    <p>A washed, vintage-inspired statement piece built around the Eye of Truth. Distressed texture, muted tones and the kind of graphic that feels discovered instead of manufactured.</p>
+    <div><button class="btn" onclick="openProduct('Eye Washed Jacket',120)">SHOP THE PIECE — $120</button></div>
+  </div>
+</section>
+
+<section id="lookbook">
+  <div class="label">COLLECTION 001</div><h2 class="section-title">LOOKBOOK</h2>
+  <div class="lookbook">
+    <div class="look">LOOK 01</div><div class="look">LOOK 02</div><div class="look">LOOK 03</div><div class="look">LOOK 04</div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="label">WHY HIDDEN SINS?</div>
+  <h2>WE ALL HAVE<br>SOMETHING<br>WE HIDE.</h2>
+  <p>Hidden Sins is a streetwear label built around identity, contradiction and the parts of ourselves we keep behind closed doors. Collection 001 is the beginning — a visual language of washed garments, symbolic graphics and imperfect truth.</p>
+  <p><strong>We're all hiding in truth.</strong></p>
+</section>
+
+<section class="signup" id="size">
+  <div class="label">FIRST ACCESS</div>
+  <h2>KNOW WHEN<br>THE SINS DROP.</h2>
+  <p>Get first access to Collection 001, limited pre-orders and future releases.</p>
+  <form onsubmit="signup(event)"><input id="email" type="email" placeholder="ENTER YOUR EMAIL" required><button>ENTER</button></form>
+  <div id="signupMsg" style="font-size:11px;margin-top:12px"></div>
+</section>
+
+<footer>
+  <div><div class="footbrand">HIDDEN SINS</div><div style="color:#999999;font-size:11px;margin-top:8px">WE'RE ALL HIDING IN TRUTH.</div></div>
+  <div class="footlinks"><a href="#collection">SHOP</a><a href="#about">ABOUT</a><a href="#size">SIZE GUIDE</a><a href="mailto:hello@hiddensins.com">CONTACT</a><a href="#">INSTAGRAM</a></div>
+  <div class="copyright">© 2026 HIDDEN SINS. ALL RIGHTS RESERVED.</div>
+</footer>
+
+<div class="modal" id="modal">
+ <div class="modal-box">
+  <button class="close" onclick="closeProduct()">×</button>
+  <div class="label">COLLECTION 001 / PRE-ORDER</div>
+  <h2 id="modalName">PRODUCT</h2>
+  <div id="modalPrice" style="font-size:15px">$60</div>
+  <p>Pre-order this piece from Hidden Sins Collection 001. Final garment photos, production timing and shipping details can be updated here before launch.</p>
+  <strong style="font-size:10px;letter-spacing:2px">SELECT SIZE</strong>
+  <div class="sizes">
+   <button class="size" onclick="selectSize(this)">XS</button><button class="size" onclick="selectSize(this)">S</button><button class="size" onclick="selectSize(this)">M</button><button class="size" onclick="selectSize(this)">L</button><button class="size" onclick="selectSize(this)">XL</button><button class="size" onclick="selectSize(this)">2XL</button>
+  </div>
+  <button class="btn" style="width:100%" onclick="addCart()">ADD TO CART</button>
+  <div class="cartmsg" id="cartmsg"></div>
+ </div>
+</div>
+<script>
+let count=0,current={name:'',price:0},selected='';
+function openProduct(name,price){current={name,price};document.getElementById('modalName').textContent=name;document.getElementById('modalPrice').textContent='$'+price;document.getElementById('modal').classList.add('show');document.getElementById('cartmsg').textContent='';document.querySelectorAll('.size').forEach(x=>x.classList.remove('selected'));selected=''}
+function closeProduct(){document.getElementById('modal').classList.remove('show')}
+function selectSize(el){document.querySelectorAll('.size').forEach(x=>x.classList.remove('selected'));el.classList.add('selected');selected=el.textContent}
+function addCart(){if(!selected){document.getElementById('cartmsg').textContent='Please select a size first.';return}count++;document.getElementById('cartCount').textContent='CART ('+count+')';document.getElementById('cartmsg').textContent=current.name+' — '+selected+' added to cart. Connect this button to your checkout platform before launch.'}
+function signup(e){e.preventDefault();document.getElementById('signupMsg').textContent='You’re on the list. Welcome to Hidden Sins.';document.getElementById('email').value=''}
+window.addEventListener('click',e=>{if(e.target.id==='modal')closeProduct()})
+</script>
+</body>
+</html>
